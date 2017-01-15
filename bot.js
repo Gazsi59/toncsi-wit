@@ -176,18 +176,18 @@ console.log(body) // Print the json response
 			context.forecast = '';
  			for( q in retData.list){
 
-if ( day.getMonth()+1 = "1")   { honap = "Jan"; }
-if ( day.getMonth()+1 = "2")   { honap = "Feb"; }
-if ( day.getMonth()+1 = "3")   { honap = "Mar"; }
-if ( day.getMonth()+1 = "4")   { honap = "Apr"; }
-if ( day.getMonth()+1 = "5")   { honap = "Máj"; }
-if ( day.getMonth()+1 = "6")   { honap = "Jún"; }
-if ( day.getMonth()+1 = "7")   { honap = "Júl"; }
-if ( day.getMonth()+1 = "8")   { honap = "Aug"; }
-if ( day.getMonth()+1 = "9")   { honap = "Szep"; }
-if ( day.getMonth()+1 = "10")  { honap = "Okt"; }
-if ( day.getMonth()+1 = "11")  { honap = "Nov"; }
-if ( day.getMonth()+1 = "12")  { honap = "Dec"; }
+if ( ${day.getMonth()+1} = "1")   { honap = "Jan"; }
+if ( ${day.getMonth()+1} = "2")   { honap = "Feb"; }
+if ( ${day.getMonth()+1} = "3")   { honap = "Mar"; }
+if ( ${day.getMonth()+1} = "4")   { honap = "Apr"; }
+if ( ${day.getMonth()+1} = "5")   { honap = "Máj"; }
+if ( ${day.getMonth()+1} = "6")   { honap = "Jún"; }
+if ( ${day.getMonth()+1} = "7")   { honap = "Júl"; }
+if ( ${day.getMonth()+1} = "8")   { honap = "Aug"; }
+if ( ${day.getMonth()+1} = "9")   { honap = "Szep"; }
+if ( ${day.getMonth()+1} = "10")  { honap = "Okt"; }
+if ( ${day.getMonth()+1} = "11")  { honap = "Nov"; }
+if ( ${day.getMonth()+1} = "12")  { honap = "Dec"; }
 if q = 0 { honap = "Ma"}
 				context.forecast =  context.forecast +
 				`
