@@ -6,6 +6,7 @@ var request = require("request")
 const APP_ID = '07976ea0d7f1371a9e527add86391b84';
 var irany = "";
 var orsz = "";
+var honap = "";
 //var date = new Date(UNIX_Timestamp * 1000);
 
 // Weather Example
@@ -141,15 +142,17 @@ context.forecast = '';
 console.log(body) // Print the json response
 
         context.forecast =
-`${Date(response.body.dt * 1000)}
-Jelnlegi hőmérséklet ${response.body.main.temp} °C 
-A mai minimum        ${response.body.main.temp_min} °C 
-A mai maximum        ${response.body.main.temp_max} °C 
-Égkép                ${response.body.weather[0].description}
-Légnyomás            ${response.body.main.pressure} hPa 
-Páratartalom         ${response.body.main.humidity} % 
-A szélsebesség       ${response.body.wind.speed} km/óra
-${irany}`
+`${response.body.weather[0].description} ${response.body.main.temp} °C `
+	
+// // `${Date(response.body.dt * 1000)}
+// Jelnlegi hőmérséklet ${response.body.main.temp} °C 
+// A mai minimum        ${response.body.main.temp_min} °C 
+// A mai maximum        ${response.body.main.temp_max} °C 
+// Égkép                ${response.body.weather[0].description}
+// Légnyomás            ${response.body.main.pressure} hPa 
+// Páratartalom         ${response.body.main.humidity} % 
+// A szélsebesség       ${response.body.wind.speed} km/óra
+// ${irany}`
         cb(context);
 	context = '';
 
