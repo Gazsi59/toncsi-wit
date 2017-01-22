@@ -224,7 +224,7 @@ console.log(body) // Print the json response
 				}
 				else
 				{context.forecast =  context.forecast +
-				`${substr(qq,3)}.${day.getDate()}: Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
+				`${day.getDate()}: Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
 	${retData.list[qq].weather[0].description}
 `
 				}
