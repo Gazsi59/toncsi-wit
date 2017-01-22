@@ -165,17 +165,15 @@ console.log(body) // Print the json response
   
 // getForecast bot executes
   ['getForecast'](sessionId, context, cb) {
-	   request(
-		 `http://api.openweathermap.org/data/2.5/forecast/daily?q=${context.loc}&units=metric&lang=hu&cnt=5&APPID=07976ea0d7f1371a9e527add86391b84`, get7Day); 	   function get7Day(err, response, body)
-	  {
-		if(!err && response.statusCode < 400){
 			var retData = JSON.parse(body);
 			var params = [];
 			var day = new Date();
 			var q = 0;						 
 			var qq = 0;						 
- // const dday = dayMap[dateInMilliseconds.getDay()];
-//  const honap = `${monthMap[dateInMilliseconds.getMonth()]} ${dateInMilliseconds.getDate()}`;
+	   request(
+		 `http://api.openweathermap.org/data/2.5/forecast/daily?q=${context.loc}&units=metric&lang=hu&cnt=5&APPID=07976ea0d7f1371a9e527add86391b84`, get7Day); 	   function get7Day(err, response, body)
+	  {
+		if(!err && response.statusCode < 400){
 			context.forecast = '';
  			for( qq in retData.list)
 			{
@@ -196,7 +194,7 @@ console.log(body) // Print the json response
 // honap+":"+${day.getDate()} Min:${JSON.stringify(retData.list[q].temp.min)} Max:${JSON.stringify(retData.list[q].temp.max)} ${retData.list[q].weather[0].description}`
 // 				day.setDate(day.getDate()+1);
 
-				if (q > '0')
+				if (q = '0')
 				{context.forecast =  context.forecast +
 				`Ma  Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} ${retData.list[qq].weather[0].description}
 `
