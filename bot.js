@@ -7,6 +7,7 @@ const APP_ID = '07976ea0d7f1371a9e527add86391b84';
 var irany = "";
 var orsz = "";
 var honap = "";
+var q = 0;						 
 //var date = new Date(UNIX_Timestamp * 1000);
 
 // Weather Example
@@ -171,7 +172,6 @@ console.log(body) // Print the json response
 			var retData = JSON.parse(body);
 			var params = [];
 			var day = new Date();
-			var q = 0;						 
 			var qq = 0;						 
 		if(!err && response.statusCode < 400){
 			context.forecast = '';
@@ -196,15 +196,16 @@ console.log(body) // Print the json response
 
 				if (q = '0')
 				{context.forecast =  context.forecast +
-				`Ma:
-Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} ${retData.list[qq].weather[0].description}
+				`Ma: Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
+    ${retData.list[qq].weather[0].description}
 `
 				q = '1';
 				}
 				else
 				{context.forecast =  context.forecast +
 				` QQ = ${qq} ${day.getMonth()} ${day.getDate()} 
-Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} ${retData.list[qq].weather[0].description}
+Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
+    ${retData.list[qq].weather[0].description}
 `
 				}
 				day.setDate(day.getDate()+1);
