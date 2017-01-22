@@ -197,7 +197,7 @@ if (q = 0) { honap = "Ma"; }
 
 				if (q = 0)
 				{context.forecast =  context.forecast +
-				`Ma  Min:${JSON.stringify(retData.list[q].temp.min)} Max:${JSON.stringify(retData.list[q].temp.max)} ${retData.list[q].weather[0].description}`
+				`Ma  Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} ${retData.list[qq].weather[0].description}`
 				}
 //				if (q < 0)
 //				{context.forecast =  context.forecast +
