@@ -192,7 +192,8 @@ console.log(body) // Print the json response
 	${retData.list[qq].weather[0].description}
 `
 				}
-				day.setDate(day.getDate()+1);				
+				day.setDate(day.getDate()+1);	
+				
 				if ( ${qq} = '1' ) { honap = "Jan"; }
 				if ( ${qq} = '2' ) { honap = "Feb"; }
 				if ( ${qq} = '3' ) { honap = "Mar"; }
