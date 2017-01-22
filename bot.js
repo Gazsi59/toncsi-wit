@@ -188,16 +188,16 @@ console.log(body) // Print the json response
 				}
 				else
 				{context.forecast =  context.forecast +
-				`${honap}.${day.getDate()}: Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
+				`${qq}.${day.getDate()}: Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
 	${retData.list[qq].weather[0].description}
 `
 				}
-				day.setDate(day.getDate()+1);
-				if (${day.getMonth()+1} = '1') {honap = "Jan"}
-				if (${day.getMonth()+1} = '2') {honap = "Feb"}
-				if (${day.getMonth()+1} = '3') {honap = "Mar"}
-				if (${day.getMonth()+1} = '4') {honap = "Ápr"}
-				if (${day.getMonth()+1} = '5') {honap = "Máj"}
+				day.setDate(day.getDate()+1);				
+				if ( ${qq} = '1' ) { honap = "Jan"; }
+				if ( ${qq} = '2' ) { honap = "Feb"; }
+				if ( ${qq} = '3' ) { honap = "Mar"; }
+				if ( ${qq} = '4' ) { honap = "Ápr"; }
+				if ( ${qq} = '5' ) { honap = "Máj"; }
 			}
         		cb(context);
 			context = '';
