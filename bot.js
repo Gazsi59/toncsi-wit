@@ -142,7 +142,7 @@ context.forecast = '';
 console.log(body) // Print the json response
 
         context.forecast =
-`Most: ${response.body.weather[0].description} ${response.body.main.temp} °C `
+` ${response.body.weather[0].description} ${response.body.main.temp} °C `
 	
 // // `${Date(response.body.dt * 1000)}
 // Jelnlegi hőmérséklet ${response.body.main.temp} °C 
@@ -191,17 +191,22 @@ console.log(body) // Print the json response
 // if ( ${day.getMonth()+1} = "10")  { honap = "Okt"; }
 // if ( ${day.getMonth()+1} = "11")  { honap = "Nov"; }
 // if ( ${day.getMonth()+1} = "12")  { honap = "Dec"; }
-if (q = 0) { honap = "Ma"; }
+//if (q = 0) { honap = "Ma"; }
 // honap+":"+${day.getDate()} Min:${JSON.stringify(retData.list[q].temp.min)} Max:${JSON.stringify(retData.list[q].temp.max)} ${retData.list[q].weather[0].description}`
 // 				day.setDate(day.getDate()+1);
 
-				if (q = 0)
-				{context.forecast =  context.forecast +
-				`Ma  Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} ${retData.list[qq].weather[0].description}`
-				}
-//				if (q < 0)
+//				if (q = 0)
 //				{context.forecast =  context.forecast +
-//				`${day.getDate()} Min:${JSON.stringify(retData.list[q].temp.min)} Max:${JSON.stringify(retData.list[q].temp.max)} ${retData.list[q].weather[0].description}`
+//				`Ma  Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} ${retData.list[qq].weather[0].description}`
+//				}
+				
+				
+//				`Ma  Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} ${retData.list[qq].weather[0].description}`
+//				if (q < 0)
+//
+				
+				{context.forecast =  context.forecast +
+				`${day.getDate()} Min:${JSON.stringify(retData.list[q].temp.min)} Max:${JSON.stringify(retData.list[q].temp.max)} ${retData.list[q].weather[0].description}`
 //				}
 q = q + 1;
 				day.setDate(day.getDate()+1);
