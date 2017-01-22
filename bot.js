@@ -200,10 +200,10 @@ q = q + 1;
 				{context.forecast =  context.forecast +
 				`Ma  Min:${JSON.stringify(retData.list[q].temp.min)} Max:${JSON.stringify(retData.list[q].temp.max)} ${retData.list[q].weather[0].description}`
 				}
-				if (q < 0)
-				{context.forecast =  context.forecast +
-				`${day.getDate()} Min:${JSON.stringify(retData.list[q].temp.min)} Max:${JSON.stringify(retData.list[q].temp.max)} ${retData.list[q].weather[0].description}`
-				}
+//				if (q < 0)
+//				{context.forecast =  context.forecast +
+//				`${day.getDate()} Min:${JSON.stringify(retData.list[q].temp.min)} Max:${JSON.stringify(retData.list[q].temp.max)} ${retData.list[q].weather[0].description}`
+//				}
 				day.setDate(day.getDate()+1);
 			}
         		cb(context);
