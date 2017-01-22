@@ -188,10 +188,10 @@ console.log(body) // Print the json response
 				}
 				else
 				{
-					
+				if ${day.getMonth() + 1} = '1' { honap = 'Jan'}	
 				context.forecast =  context.forecast +
 				`
-${day.getMonth() + 1} ${day.getDate()}:
+${honap} ${day.getDate()}:
 Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
         ${retData.list[qq].weather[0].description}
 `
