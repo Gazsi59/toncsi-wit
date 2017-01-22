@@ -207,7 +207,7 @@ console.log(body) // Print the json response
 				
 				{context.forecast =  context.forecast +
 				`${day.getDate()} Min:${JSON.stringify(retData.list[q].temp.min)} Max:${JSON.stringify(retData.list[q].temp.max)} ${retData.list[q].weather[0].description}`
-//				}
+				}
 q = q + 1;
 				day.setDate(day.getDate()+1);
 			}
