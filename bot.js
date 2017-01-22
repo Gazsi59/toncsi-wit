@@ -176,7 +176,9 @@ console.log(body) // Print the json response
 			context.forecast = '';
  			for( q in retData.list){
 
-if ( ${day.getMonth()+1} = 1)   { honap = "Jan"; }
+//  const day = dayMap[dateInMilliseconds.getDay()];
+//  const month = `${monthMap[dateInMilliseconds.getMonth()]} ${dateInMilliseconds.getDate()}`;
+if ( day.getMonth()+1 = 1)   { honap = "Jan"; }
 // if ( ${day.getMonth()+1} = "2")   { honap = "Feb"; }
 // if ( ${day.getMonth()+1} = "3")   { honap = "Mar"; }
 // if ( ${day.getMonth()+1} = "4")   { honap = "Apr"; }
