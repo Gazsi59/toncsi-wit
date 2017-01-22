@@ -174,11 +174,6 @@ console.log(body) // Print the json response
 			var day = new Date();
 			var qq = 0;						 
 			var q = 0;						 
-		if(!err && response.statusCode < 400){
-			context.forecast = '';
- 
-			for( qq in retData.list)
-			{
 				  if (  qq   = '1 0' )   { honap = "Jan" }
 				  if (  qq   = '2 0' )   { honap = "Jan" }
 				  if (  qq   = '3 0' )   { honap = "Jan" }
@@ -188,7 +183,11 @@ console.log(body) // Print the json response
 				  if (  qq   = '2 1' )   { honap = "Feb" }
 				  if (  qq   = '3 1' )   { honap = "Feb" }
 				  if (  qq   = '4 1' )   { honap = "Feb" }
-
+		if(!err && response.statusCode < 400){
+			context.forecast = '';
+ 
+			for( qq in retData.list)
+			{
 				if (qq < '0 0')
 				{context.forecast =  context.forecast +
 				`Ma:  ${qq}  Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
