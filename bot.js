@@ -191,7 +191,7 @@ console.log(body) // Print the json response
 					
 				context.forecast =  context.forecast +
 				`
-${day.getMonth()} ${day.getDate()}:
+${day.getMonth() + 1} ${day.getDate()}:
 Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
         ${retData.list[qq].weather[0].description}
 `
