@@ -197,7 +197,7 @@ console.log(body) // Print the json response
 //				  if (  qq   = '3 1' )   { honap = "Feb"; };
 //				  if (  qq   = '4 1' )   { honap = "Feb"; };
 				context.forecast =  context.forecast +
-				` QQ = ${qq} ${honap} ${day.getDate()} Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
+				` QQ = ${qq}  ${day.getDate()} Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
         ${retData.list[qq].weather[0].description}
 `
 				}
