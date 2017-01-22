@@ -196,7 +196,7 @@ console.log(body) // Print the json response
 						${retData.list[qq].weather[0].description}
 					`
 				}
-				}
+				
 				day.setDate(day.getDate()+1);
 			}
         		cb(context);
