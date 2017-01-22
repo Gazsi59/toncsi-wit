@@ -187,10 +187,10 @@ console.log(body) // Print the json response
 				}
 				else
 				{
-				if (qq = "1 0") {honap = "Jan";}
-				if (qq = "2 0") {honap = "Jan";}
-				if (qq = "3 0") {honap = "Jan";}
-				if (qq = "4 0") {honap = "Jan";}
+				if (qq = '1 0') {honap = 'Jan';}
+				if (qq = '2 0') {honap = 'Jan';}
+				if (qq = '3 0') {honap = 'Jan';}
+				if (qq = '4 0') {honap = 'Jan';}
 					
 				context.forecast =  context.forecast +
 				`${honap} ${day.getDate()} 
