@@ -179,6 +179,8 @@ console.log(body) // Print the json response
  
 			for( qq in retData.list)
 			{
+context.forecast =  context.forecast + '${qq}
+				';
 				if (qq < '0 0')
 				{context.forecast =  context.forecast +
 				`Ma: Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
@@ -189,11 +191,8 @@ console.log(body) // Print the json response
 				{
 					
 				context.forecast =  context.forecast +
-				`if (qq = '1 0') {honap = 'Jan';}
-				 if (qq = '2 0') {honap = 'Jan';}
-				 if (qq = '3 0') {honap = 'Jan';}
-				 if (qq = '4 0') {honap = 'Jan';}
-${honap} ${day.getDate()} 
+				`
+${day.getDate()} .
 Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
         ${retData.list[qq].weather[0].description}
 `
