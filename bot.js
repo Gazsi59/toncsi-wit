@@ -202,7 +202,7 @@ q = q + 1;
 				}
 				if (q < 0)
 				{context.forecast =  context.forecast +
-				`${day.getDate()} Min:${JSON.stringify(retData.list[q].temp.min)} Max:${JSON.stringify(retData.list[q].temp.max)} ${retData.list[q].weather[0].description}`
+				`${day.getMonth() + 1} Min:${JSON.stringify(retData.list[q].temp.min)} Max:${JSON.stringify(retData.list[q].temp.max)} ${retData.list[q].weather[0].description}`
 				}
 				day.setDate(day.getDate()+1);
 			}
