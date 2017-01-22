@@ -180,7 +180,7 @@ console.log(body) // Print the json response
 			for( qq in retData.list)
 			{
 context.forecast =  context.forecast + '${qq}
-				'
+				';
 				
 				if (qq < '0 0')
 				{context.forecast =  context.forecast +
