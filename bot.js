@@ -188,7 +188,7 @@ console.log(body) // Print the json response
 				}
 				else
 				{
-				if (${day.getMonth() + 1} = '1') { 	
+	
 				context.forecast =  context.forecast +
 				`
 					Jan ${day.getDate()}:
