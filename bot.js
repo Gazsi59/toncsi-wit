@@ -204,7 +204,7 @@ console.log(body) // Print the json response
 // honap+":"+${day.getDate()} Min:${JSON.stringify(retData.list[q].temp.min)} Max:${JSON.stringify(retData.list[q].temp.max)} ${retData.list[q].weather[0].description}`
 // 				day.setDate(day.getDate()+1);
 
-				if (qq < '0 0')
+				if (qq = '0 0')
 				{context.forecast =  context.forecast +
 				`Ma:  QQ = ${qq} Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
         ${retData.list[qq].weather[0].description}
