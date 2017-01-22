@@ -122,6 +122,7 @@ const actions = {
     console.log(error.message);
   },
 
+	
   // getCurrent bot executes
   ['getDetails'](sessionId, context, cb) {
     request({
