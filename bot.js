@@ -188,7 +188,7 @@ console.log(body) // Print the json response
 				}
 				else
 				{context.forecast =  context.forecast +
-				`Jan ${day.getDate()}: Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
+				` ${day.getMonth()} ${day.getDate()}: Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
 	${retData.list[qq].weather[0].description}
 `
 }
