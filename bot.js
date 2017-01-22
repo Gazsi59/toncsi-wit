@@ -174,9 +174,7 @@ console.log(body) // Print the json response
 			var day = new Date();
 			var qq = 0;						 
 			var q = 0;						 
-context.forecast =  context.forecast + '${qq}
-				';
-				
+		
 		if(!err && response.statusCode < 400){
 			context.forecast = '';
  
