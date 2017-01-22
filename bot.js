@@ -202,7 +202,7 @@ console.log(body) // Print the json response
 // getForecast bot executes
   ['getForecast'](sessionId, context, cb) {
 	   request(
-		 `http://api.openweathermap.org/data/2.5/forecast/daily?q=${context.loc}&units=metric&lang=hu&cnt=5&APPID=07976ea0d7f1371a9e527add86391b84`, get7Day); 	   function get7Day(err, response, body)
+		 `http://api.openweathermap.org/data/2.5/forecast/daily?q=${context.loc}&units=metric&lang=hu&cnt=10&APPID=07976ea0d7f1371a9e527add86391b84`, get7Day); 	   function get7Day(err, response, body)
 	  {
 			var retData = JSON.parse(body);
 			var params = [];
@@ -215,6 +215,9 @@ console.log(body) // Print the json response
  
 			for( qq in retData.list)
 			{
+				{
+					
+				}
 				if (qq < '0 0')
 				{context.forecast =  context.forecast +
 				`Ma: Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
@@ -223,7 +226,7 @@ console.log(body) // Print the json response
 				}
 				else
 				{context.forecast =  context.forecast +
-				`${day.getDate()}: Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
+				`${qq} ${day.getDate()}: Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
 	${retData.list[qq].weather[0].description}
 `
 				}
