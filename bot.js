@@ -179,7 +179,7 @@ console.log(body) // Print the json response
  			for( qq in retData.list)
 			{
 
- if (  substr(3).qq   = '0' )   { honap = "Jan"; }
+ if (  qq.substr(3)   = '0' )   { honap = "Jan"; }
 // if ( ${day.getMonth()+1} = "2")   { honap = "Feb"; }
 // if ( ${day.getMonth()+1} = "3")   { honap = "Mar"; }
 // if ( ${day.getMonth()+1} = "4")   { honap = "Apr"; }
