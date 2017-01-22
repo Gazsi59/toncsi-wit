@@ -173,12 +173,13 @@ console.log(body) // Print the json response
 			var params = [];
 			var day = new Date();
 			var q = 0;						 
+			var qq = 0;						 
 			context.forecast = '';
- 			for( q in retData.list){
+ 			for( qq in retData.list){
 
-//  const day = dayMap[dateInMilliseconds.getDay()];
-//  const month = `${monthMap[dateInMilliseconds.getMonth()]} ${dateInMilliseconds.getDate()}`;
-// if ( ${ day.getMonth() } + 1 = 1)   { honap = "Jan"; }
+  const day = dayMap[dateInMilliseconds.getDay()];
+  const honap = `${monthMap[dateInMilliseconds.getMonth()]} ${dateInMilliseconds.getDate()}`;
+ if ( ${ day.getMonth() } + 1 = '1' )   { honap = "Jan"; }
 // if ( ${day.getMonth()+1} = "2")   { honap = "Feb"; }
 // if ( ${day.getMonth()+1} = "3")   { honap = "Mar"; }
 // if ( ${day.getMonth()+1} = "4")   { honap = "Apr"; }
@@ -190,11 +191,13 @@ console.log(body) // Print the json response
 // if ( ${day.getMonth()+1} = "10")  { honap = "Okt"; }
 // if ( ${day.getMonth()+1} = "11")  { honap = "Nov"; }
 // if ( ${day.getMonth()+1} = "12")  { honap = "Dec"; }
-// if (q = 0)
-{ honap = "Ma"}
+if (q = 0) { honap = "Ma"; }
+q = q + 1;
 				context.forecast =  context.forecast +
 				`
-honap+":"+${day.getDate()} Min:${JSON.stringify(retData.list[q].temp.min)} Max:${JSON.stringify(retData.list[q].temp.max)} ${retData.list[q].weather[0].description}`
+// honap+":"+${day.getDate()} Min:${JSON.stringify(retData.list[q].temp.min)} Max:${JSON.stringify(retData.list[q].temp.max)} ${retData.list[q].weather[0].description}`
+// 				day.setDate(day.getDate()+1);
+honap+":" day Min:${JSON.stringify(retData.list[q].temp.min)} Max:${JSON.stringify(retData.list[q].temp.max)} ${retData.list[q].weather[0].description}`
 				day.setDate(day.getDate()+1);
 			}
         		cb(context);
