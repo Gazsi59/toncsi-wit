@@ -123,6 +123,42 @@ const actions = {
   },
 
   // getCurrent bot executes
+  ['getDetails'](sessionId, context, cb) {
+    request({
+      url: `http://api.openweathermap.org/data/2.5/weather?q=${context.loc}&units=metric&lang=hu&type=accurate&APPID=07976ea0d7f1371a9e527add86391b84`,
+      json: true
+    }, function (error, response, body) {
+
+      if (!error && response.statusCode === 200) {
+
+if ( response.body.wind.deg > 338 &&  response.body.wind.deg  < 23)  { irany = "A szél iránya Északi"; }
+if ( response.body.wind.deg > 22  &&  response.body.wind.deg  < 67)  { irany = "A szél iránya Északkeleti";}
+if ( response.body.wind.deg > 67  &&  response.body.wind.deg  < 102) { irany = "A szél iránya Keleti";}
+if ( response.body.wind.deg > 102 &&  response.body.wind.deg  < 147) { irany = "A szél iránya Délkeleti";}
+if ( response.body.wind.deg > 147 &&  response.body.wind.deg  < 193) { irany = "A szél iránya Déli";}
+if ( response.body.wind.deg > 193 &&  response.body.wind.deg  < 238) { irany = "A szél iránya Délnyugati";}
+if ( response.body.wind.deg > 238 &&  response.body.wind.deg  < 283) { irany = "A szél iránya Nyugati";}
+if ( response.body.wind.deg > 283 &&  response.body.wind.deg  < 339) { irany = "A szél iránya Északnyugati";}
+context.forecast = '';
+console.log(body) // Print the json response
+
+        context.forecast =
+` ${response.body.weather[0].description} ${response.body.main.temp} °C `
+	
+ `${Date(response.body.dt * 1000)}
+ Jelnlegi hőmérséklet ${response.body.main.temp} °C 
+ Égkép                ${response.body.weather[0].description}
+ Légnyomás            ${response.body.main.pressure} hPa 
+ Páratartalom         ${response.body.main.humidity} % 
+ A szélsebesség       ${response.body.wind.speed} km/óra
+ ${irany}`
+        cb(context);
+	context = '';
+
+      }
+    })
+  },
+  // getCurrent bot executes
   ['getCurrent'](sessionId, context, cb) {
     request({
       url: `http://api.openweathermap.org/data/2.5/weather?q=${context.loc}&units=metric&lang=hu&type=accurate&APPID=07976ea0d7f1371a9e527add86391b84`,
