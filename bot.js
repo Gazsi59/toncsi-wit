@@ -179,17 +179,6 @@ console.log(body) // Print the json response
  
 			for( qq in retData.list)
 			{
-
-// if (  qq   = '1 0' )   { honap = "Jan"; }
-//  if (  qq   = '2 0' )   { honap = "Jan"; }
-//  if (  qq   = '3 0' )   { honap = "Jan"; }
-//  if (  qq   = '4 0' )   { honap = "Jan"; }
-
-//  if (  qq   = '1 1' )   { honap = "Feb"; }
-//  if (  qq   = '2 1' )   { honap = "Feb"; }
-//  if (  qq   = '3 1' )   { honap = "Feb"; }
-//  if (  qq   = '4 1' )   { honap = "Feb"; }
-
 				if (qq < '0 0')
 				{context.forecast =  context.forecast +
 				`Ma:  Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
@@ -197,8 +186,18 @@ console.log(body) // Print the json response
 `
 				}
 				else
-				{context.forecast =  context.forecast +
-				` QQ = ${qq}  ${day.getDate()} Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
+				{
+				  if (  qq   = '1 0' )   { honap = "Jan"; }
+				  if (  qq   = '2 0' )   { honap = "Jan"; }
+				  if (  qq   = '3 0' )   { honap = "Jan"; }
+				  if (  qq   = '4 0' )   { honap = "Jan"; }
+
+				  if (  qq   = '1 1' )   { honap = "Feb"; }
+				  if (  qq   = '2 1' )   { honap = "Feb"; }
+				  if (  qq   = '3 1' )   { honap = "Feb"; }
+				  if (  qq   = '4 1' )   { honap = "Feb"; }
+				context.forecast =  context.forecast +
+				` QQ = ${qq} ${honap} ${day.getDate()} Min:${JSON.stringify(retData.list[qq].temp.min)} Max:${JSON.stringify(retData.list[qq].temp.max)} 
         ${retData.list[qq].weather[0].description}
 `
 				}
