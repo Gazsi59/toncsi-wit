@@ -144,9 +144,7 @@ context.forecast = '';
 console.log(body) // Print the json response
 
         context.forecast =
-` ${response.body.weather[0].description} ${response.body.main.temp} °C `
-	
- `${Date(response.body.dt * 1000)}
+` ${response.body.weather[0].description} ${response.body.main.temp} °C 
  Jelnlegi hőmérséklet ${response.body.main.temp} °C 
  Égkép                ${response.body.weather[0].description}
  Légnyomás            ${response.body.main.pressure} hPa 
